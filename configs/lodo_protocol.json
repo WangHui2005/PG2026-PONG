@@ -1,0 +1,24 @@
+{
+  "name": "LODO cross-dataset selection",
+  "selection": "For each held-out dataset, maximize mean mAP on the other three datasets across all three backbones.",
+  "evaluation": "Apply the fold-selected configuration unchanged to all three backbones of the held-out dataset.",
+  "candidate_space": {
+    "k": [5, 7, 10, 15],
+    "tau": [0.1, 0.2],
+    "lambda_min": [0.0, 0.1],
+    "lambda_max": [0.5, 0.7, 0.9],
+    "rounds": [2]
+  },
+  "constraints": [
+    "Held-out labels and retrieval metrics are not used during selection.",
+    "The number of refinement rounds is fixed to two.",
+    "No label-based best-iteration selection is permitted."
+  ],
+  "dominant_shared_configuration": {
+    "k": 5,
+    "tau": 0.2,
+    "lambda_min": 0.0,
+    "lambda_max": 0.7,
+    "rounds": 2
+  }
+}

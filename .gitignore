@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Local feature and dataset cache.
+data
+
+# Ignore transient console logs.
+*.log

@@ -1,0 +1,5 @@
+heldout_dataset,selected_grid_index,development_mean_mAP,topk,tau,lam_min,lam_max,n_iter
+esb,7,0.6882348757731938,5,0.2,0.0,0.7,2
+ntu,7,0.6840293049398505,5,0.2,0.0,0.7,2
+abo,7,0.6788074658132959,5,0.2,0.0,0.7,2
+mn40,9,0.6646437640384986,5,0.2,0.1,0.5,2

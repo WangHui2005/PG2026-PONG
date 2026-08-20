@@ -1,0 +1,210 @@
+{
+  "baseline": "two-round AQE+DBA: AQE updates Q from T; DBA updates T from target-target neighbors only; no query-conditioned T update",
+  "selection": "maximize mean mAP on three development datasets across all three backbones, then evaluate the held-out dataset",
+  "grid": [
+    {
+      "topk": 5,
+      "tau": 0.1,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 5,
+      "tau": 0.1,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 5,
+      "tau": 0.1,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 5,
+      "tau": 0.1,
+      "alpha": 0.9,
+      "n_iter": 2
+    },
+    {
+      "topk": 5,
+      "tau": 0.2,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 5,
+      "tau": 0.2,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 5,
+      "tau": 0.2,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 5,
+      "tau": 0.2,
+      "alpha": 0.9,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.1,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.1,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.1,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.1,
+      "alpha": 0.9,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.2,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.2,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.2,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 7,
+      "tau": 0.2,
+      "alpha": 0.9,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.1,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.1,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.1,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.1,
+      "alpha": 0.9,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.2,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.2,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.2,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 10,
+      "tau": 0.2,
+      "alpha": 0.9,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.1,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.1,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.1,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.1,
+      "alpha": 0.9,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.2,
+      "alpha": 0.3,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.2,
+      "alpha": 0.5,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.2,
+      "alpha": 0.7,
+      "n_iter": 2
+    },
+    {
+      "topk": 15,
+      "tau": 0.2,
+      "alpha": 0.9,
+      "n_iter": 2
+    }
+  ],
+  "pong_mean_mAP": 0.6773676831240657,
+  "aqe_dba_mean_mAP": 0.6625586917718312,
+  "delta_mean_mAP_pp": 1.480899135223454,
+  "pong_mean_NDCG@100": 0.47673799498189623,
+  "aqe_dba_mean_NDCG@100": 0.4729677895518125,
+  "delta_mean_NDCG_pp": 0.37702054300838456,
+  "pong_mean_ANMRR": 0.35868449098617167,
+  "aqe_dba_mean_ANMRR": 0.3739104881187216,
+  "delta_mean_ANMRR_pp": -1.522599713254995,
+  "pong_mAP_wins": 9,
+  "pong_NDCG_wins": 9,
+  "pong_ANMRR_wins": 9
+}

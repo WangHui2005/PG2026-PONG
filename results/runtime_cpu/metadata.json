@@ -1,0 +1,20 @@
+{
+  "q_similarity_ms": 27.45855058280237,
+  "q_topk_ms": 7.650893749996612,
+  "q_update_ms": 3.3527608332709256,
+  "t_similarity_ms": 26.07439216565884,
+  "t_topk_ms": 24.54526849881707,
+  "t_update_ms": 93.36228933261737,
+  "final_retrieval_ms": 13.635331666288645,
+  "total_ms": 196.07328008411665,
+  "settings": 12,
+  "warmups": 2,
+  "repeats": 7,
+  "params": {
+    "topk": 5,
+    "tau": 0.2,
+    "lam_min": 0.0,
+    "lam_max": 0.7,
+    "rounds": 2
+  }
+}

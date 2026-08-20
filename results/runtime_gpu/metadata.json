@@ -1,0 +1,16 @@
+{
+  "python": "3.9.25",
+  "torch": "2.8.0+cu128",
+  "torch_cuda": "12.8",
+  "numpy": "1.24.4",
+  "conda_environment": "model_align",
+  "device": "NVIDIA GeForce RTX 4090",
+  "dtype": "float32",
+  "warmups": 3,
+  "repeats": 5,
+  "teda_iterations": 2000,
+  "timed_scope": "refinement, final similarity, and full descending ranking; excludes feature extraction, loading, CPU metrics, and labels",
+  "mean_pong_ms": 3.184014232829213,
+  "mean_teda_ms": 602.2086637676693,
+  "mean_speedup": 193.82037586192132
+}

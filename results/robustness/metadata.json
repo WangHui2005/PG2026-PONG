@@ -1,0 +1,48 @@
+{
+  "views_24": {
+    "mean_baseline_mAP": 0.6050399330104957,
+    "mean_pong_mAP": 0.6773546381701525,
+    "mean_delta_mAP_pp": 7.231470515965678,
+    "positive_settings": 12
+  },
+  "views_12": {
+    "mean_baseline_mAP": 0.6034572617451066,
+    "mean_pong_mAP": 0.6753859939118717,
+    "mean_delta_mAP_pp": 7.192873216676503,
+    "positive_settings": 12
+  },
+  "views_6": {
+    "mean_baseline_mAP": 0.5929806151032403,
+    "mean_pong_mAP": 0.6673515273531937,
+    "mean_delta_mAP_pp": 7.437091224995355,
+    "positive_settings": 12
+  },
+  "low_purity": {
+    "mean_delta_mAP_pp": 1.0498880458944273,
+    "positive_settings": 8,
+    "negative_settings": 4,
+    "near_zero_settings": 0
+  },
+  "descriptor_noise_sigma_0.02": {
+    "mean_baseline_mAP": 0.5840924227662039,
+    "mean_pong_mAP": 0.6674985428380436,
+    "mean_delta_mAP_pp": 8.340612007183967,
+    "positive_settings_mean_over_seeds": 12,
+    "seeds": [
+      11,
+      29,
+      47
+    ]
+  },
+  "descriptor_noise_sigma_0.05": {
+    "mean_baseline_mAP": 0.40226572906538816,
+    "mean_pong_mAP": 0.5219197283170391,
+    "mean_delta_mAP_pp": 11.965399925165107,
+    "positive_settings_mean_over_seeds": 12,
+    "seeds": [
+      11,
+      29,
+      47
+    ]
+  }
+}

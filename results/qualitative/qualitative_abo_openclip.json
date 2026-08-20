@@ -1,0 +1,234 @@
+[
+  {
+    "query_id": "cbb0b3e09a53181ba0903b7b30b61c67",
+    "label": "bench",
+    "frozen": [
+      {
+        "target_id": "51973fc1626c9b5a03401d58d806c65f",
+        "target_label": "bench",
+        "correct": true
+      },
+      {
+        "target_id": "354026311a9c2648bf658297b4088192",
+        "target_label": "bench",
+        "correct": true
+      },
+      {
+        "target_id": "c0c9375966f43c84c04143864b7b24c2",
+        "target_label": "bench",
+        "correct": true
+      },
+      {
+        "target_id": "51bb463cabda1fbe34f2df429629d7a9",
+        "target_label": "ottoman",
+        "correct": false
+      },
+      {
+        "target_id": "67822e6e4b0210887a11c2f815f2a488",
+        "target_label": "ottoman",
+        "correct": false
+      }
+    ],
+    "pong": [
+      {
+        "target_id": "51973fc1626c9b5a03401d58d806c65f",
+        "target_label": "bench",
+        "correct": true
+      },
+      {
+        "target_id": "354026311a9c2648bf658297b4088192",
+        "target_label": "bench",
+        "correct": true
+      },
+      {
+        "target_id": "c0c9375966f43c84c04143864b7b24c2",
+        "target_label": "bench",
+        "correct": true
+      },
+      {
+        "target_id": "339e275039fa09ecc7cc72d9ead0723f",
+        "target_label": "bench",
+        "correct": true
+      },
+      {
+        "target_id": "8e8528e215d5bd9dbfc8cdd909afa59f",
+        "target_label": "bench",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "query_id": "a9a64abafa44a5ca37baf48783a3954f",
+    "label": "container or basket",
+    "frozen": [
+      {
+        "target_id": "b95b24468d8fbea281aedd7e2778c256",
+        "target_label": "container or basket",
+        "correct": true
+      },
+      {
+        "target_id": "29935f8dba2128dec6c4e332e1d22ada",
+        "target_label": "container or basket",
+        "correct": true
+      },
+      {
+        "target_id": "0a463f660631fd9ce515af2b438e6cbf",
+        "target_label": "container or basket",
+        "correct": true
+      },
+      {
+        "target_id": "bfcbf2351a3dcb31bbde3f14deb0150c",
+        "target_label": "lamp",
+        "correct": false
+      },
+      {
+        "target_id": "339e275039fa09ecc7cc72d9ead0723f",
+        "target_label": "bench",
+        "correct": false
+      }
+    ],
+    "pong": [
+      {
+        "target_id": "7fca28c1f4b2fc9c9b40ebdb727485df",
+        "target_label": "container or basket",
+        "correct": true
+      },
+      {
+        "target_id": "b9bbdd067ede630adf7eb96966342a02",
+        "target_label": "container or basket",
+        "correct": true
+      },
+      {
+        "target_id": "29935f8dba2128dec6c4e332e1d22ada",
+        "target_label": "container or basket",
+        "correct": true
+      },
+      {
+        "target_id": "0a463f660631fd9ce515af2b438e6cbf",
+        "target_label": "container or basket",
+        "correct": true
+      },
+      {
+        "target_id": "b95b24468d8fbea281aedd7e2778c256",
+        "target_label": "container or basket",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "query_id": "74a7e881bddb8ee84559a36c199a3f46",
+    "label": "pillow",
+    "frozen": [
+      {
+        "target_id": "4b99b09a1db2be6434ff278b05b9c59b",
+        "target_label": "pillow",
+        "correct": true
+      },
+      {
+        "target_id": "c79fad61006b3e1d9897bb54e2b46664",
+        "target_label": "pillow",
+        "correct": true
+      },
+      {
+        "target_id": "51913cd73e2e3aaff9b238427184d421",
+        "target_label": "sofa",
+        "correct": false
+      },
+      {
+        "target_id": "37666c3da18cb0dbec9435d949b6182a",
+        "target_label": "sofa",
+        "correct": false
+      },
+      {
+        "target_id": "82f204ef35a45dfafd6e41c3e28f63b5",
+        "target_label": "pillow",
+        "correct": true
+      }
+    ],
+    "pong": [
+      {
+        "target_id": "c79fad61006b3e1d9897bb54e2b46664",
+        "target_label": "pillow",
+        "correct": true
+      },
+      {
+        "target_id": "83167515fe72f59303cac75f9a0e1f14",
+        "target_label": "pillow",
+        "correct": true
+      },
+      {
+        "target_id": "6f981e165f749924a395578d95da4e27",
+        "target_label": "pillow",
+        "correct": true
+      },
+      {
+        "target_id": "3dd2c3e71617200680e5c014b809c9f9",
+        "target_label": "pillow",
+        "correct": true
+      },
+      {
+        "target_id": "5603132318700fa274f5a88849884f18",
+        "target_label": "pillow",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "query_id": "4efa674f22bec9010b3fb7762fe13539",
+    "label": "vase",
+    "frozen": [
+      {
+        "target_id": "779b98ca445c4a2df67fcb5e46d1f080",
+        "target_label": "vase",
+        "correct": true
+      },
+      {
+        "target_id": "2b322e264d7c721445eebd2279efe8db",
+        "target_label": "vase",
+        "correct": true
+      },
+      {
+        "target_id": "1aa0b1fc82f05e49428b3ada782a6902",
+        "target_label": "container or basket",
+        "correct": false
+      },
+      {
+        "target_id": "209a7841db197e8da27b3e0ba5be71f0",
+        "target_label": "vase",
+        "correct": true
+      },
+      {
+        "target_id": "6c4132da805ef1fdf20463fdb7e47ea4",
+        "target_label": "vase",
+        "correct": true
+      }
+    ],
+    "pong": [
+      {
+        "target_id": "779b98ca445c4a2df67fcb5e46d1f080",
+        "target_label": "vase",
+        "correct": true
+      },
+      {
+        "target_id": "1ca505f0ad9aaab31c97db6cbf192d34",
+        "target_label": "vase",
+        "correct": true
+      },
+      {
+        "target_id": "2b322e264d7c721445eebd2279efe8db",
+        "target_label": "vase",
+        "correct": true
+      },
+      {
+        "target_id": "6c4132da805ef1fdf20463fdb7e47ea4",
+        "target_label": "vase",
+        "correct": true
+      },
+      {
+        "target_id": "209a7841db197e8da27b3e0ba5be71f0",
+        "target_label": "vase",
+        "correct": true
+      }
+    ]
+  }
+]

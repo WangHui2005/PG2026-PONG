@@ -1,0 +1,62 @@
+{
+  "parameters_by_heldout_dataset": {
+    "esb": {
+      "topk": 5,
+      "tau": 0.2,
+      "lam_min": 0.0,
+      "lam_max": 0.7,
+      "n_iter": 2
+    },
+    "ntu": {
+      "topk": 5,
+      "tau": 0.2,
+      "lam_min": 0.0,
+      "lam_max": 0.7,
+      "n_iter": 2
+    },
+    "abo": {
+      "topk": 5,
+      "tau": 0.2,
+      "lam_min": 0.0,
+      "lam_max": 0.7,
+      "n_iter": 2
+    },
+    "mn40": {
+      "topk": 5,
+      "tau": 0.2,
+      "lam_min": 0.1,
+      "lam_max": 0.5,
+      "n_iter": 2
+    }
+  },
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "batch_sizes": [
+    "single",
+    5,
+    10,
+    "full"
+  ],
+  "target_policy": "reset for formal PONG; persistent only as a diagnostic",
+  "iteration_policy": "exactly two rounds; no label-based selection",
+  "reverse_topk": "min(k, query_batch_size)",
+  "settings": [
+    "CLIP_L14_abo",
+    "CLIP_L14_esb",
+    "CLIP_L14_mn40",
+    "CLIP_L14_ntu",
+    "DINOv2_abo",
+    "DINOv2_esb",
+    "DINOv2_mn40",
+    "DINOv2_ntu",
+    "OpenCLIP_L14_abo",
+    "OpenCLIP_L14_esb",
+    "OpenCLIP_L14_mn40",
+    "OpenCLIP_L14_ntu"
+  ]
+}

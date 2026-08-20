@@ -1,0 +1,30 @@
+{
+  "protocol": "fold-selected LODO parameters, fixed final state at R=2",
+  "diagnostic_label_use": "metrics and t-SNE coloring only; never parameter or iteration selection",
+  "geometry_summary": {
+    "purity": {
+      "before_mean": 0.7844510257806827,
+      "after_mean": 0.7910938634713145,
+      "delta_mean": 0.006642837690631796,
+      "improved_settings": 9,
+      "delta_min": -0.021666666666666612,
+      "delta_max": 0.029629629629629672
+    },
+    "hubness_gini": {
+      "before_mean": 0.7493489786275437,
+      "after_mean": 0.7192097514842146,
+      "delta_mean": -0.030139227143329034,
+      "improved_settings": 12,
+      "delta_min": -0.07248525073746331,
+      "delta_max": -0.002195503315900127
+    },
+    "fisher": {
+      "before_mean": 1.9655441595380916,
+      "after_mean": 4.095122098291408,
+      "delta_mean": 2.1295779387533167,
+      "improved_settings": 12,
+      "delta_min": 1.3308663545069306,
+      "delta_max": 3.558236259784902
+    }
+  }
+}
