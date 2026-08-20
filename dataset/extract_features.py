@@ -100,7 +100,8 @@ def extract_features(model, data_loader, backbone):
     feats, labels = [], []
 
     for batch in tqdm(data_loader, desc="Extracting"):
-        mv_imgs, category = batch
+        # TeDA-style loaders may return (imgs, label) or (imgs, label, instance_path).
+        mv_imgs, category, *_ = batch
         mv_imgs = mv_imgs.cuda()
         bz, n, c, h, w = mv_imgs.size()
         mv_imgs = mv_imgs.view(-1, c, h, w)
