@@ -79,14 +79,32 @@ def build_openclip():
     return model.cuda().eval(), 768
 
 
-def build_dinov2():
-    # Load from local cache (bypass GitHub — network blocked on this server)
-    cache_dir = os.path.expanduser('~/.cache/torch/hub/facebookresearch_dinov2_main')
-    sys.path.insert(0, cache_dir)
-    import hubconf
-    model = hubconf.dinov2_vitb14(pretrained=True)
-    sys.path.remove(cache_dir)
-    # Clean up cached module so it doesn't interfere
+def build_dinov2(dinov2_repo=None):
+    """Load DINOv2 ViT-B/14.
+
+    Prefers the official ``torch.hub`` entry point and falls back to a local
+    hub cache or an explicit repository path for offline use.
+    """
+    def _load_from(path):
+        sys.path.insert(0, str(path))
+        try:
+            import hubconf
+            return hubconf.dinov2_vitb14(pretrained=True)
+        finally:
+            sys.path.remove(str(path))
+
+    if dinov2_repo is not None:
+        model = _load_from(dinov2_repo)
+    else:
+        try:
+            model = torch.hub.load("facebookresearch/dinov2", "dinov2_vitb14")
+        except Exception:
+            cache_dir = os.path.expanduser(
+                "~/.cache/torch/hub/facebookresearch_dinov2_main"
+            )
+            model = _load_from(cache_dir)
+
+    # Clean up cached modules so they don't interfere with later loads.
     for key in list(sys.modules.keys()):
         if 'dinov2' in key or key == 'hubconf':
             del sys.modules[key]
@@ -140,14 +158,23 @@ def main():
         default=DEFAULT_DATASET_CODE_ROOT,
         help='Path containing the benchmark dataset Python package.',
     )
+    parser.add_argument(
+        '--dinov2-repo',
+        type=Path,
+        default=None,
+        help='Optional path to a local DINOv2 checkout (otherwise torch.hub).',
+    )
     args = parser.parse_args()
 
     setup_seed()
     dataset_classes = load_dataset_classes(args.dataset_code_root)
 
     # Build model
-    builders = {'clip': build_clip, 'openclip': build_openclip, 'dinov2': build_dinov2}
-    model, dim = builders[args.backbone]()
+    if args.backbone == 'dinov2':
+        model, dim = build_dinov2(args.dinov2_repo)
+    else:
+        builders = {'clip': build_clip, 'openclip': build_openclip}
+        model, dim = builders[args.backbone]()
     print(f"Backbone: {args.backbone}  dim={dim}")
 
     # Output paths

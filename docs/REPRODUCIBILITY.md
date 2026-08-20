@@ -11,6 +11,16 @@ Labels and retrieval metrics are not accessed during refinement. They are used
 only after the final state for mAP, NDCG@100, ANMRR, robustness subsets, and
 embedding diagnostics.
 
+## Feature Extraction
+
+`dataset/extract_features.py` follows the TeDA/HGM2R extraction pipeline: each
+multi-view image is processed with `Resize(224)` followed by `ToTensor`, and the
+resulting `[0, 1]` tensor is passed directly to `encode_image` (CLIP and
+OpenCLIP) or to the DINOv2 model. The CLIP/OpenCLIP official `preprocess`
+normalization is intentionally **not** applied, matching how the released
+feature caches under `data/` were generated. Re-running extraction with this
+same pipeline reproduces the cached features.
+
 ## Parameter Selection
 
 `configs/lodo_protocol.json` defines the 48-configuration search space. For

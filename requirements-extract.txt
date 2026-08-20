@@ -1,0 +1,18 @@
+# Optional dependencies for `dataset/extract_features.py` (feature extraction).
+# Core evaluation (run_pong.py, experiments/*) only needs requirements.txt.
+
+torch>=2.0
+torchvision>=0.15
+tqdm>=4.64
+Pillow>=9.0
+
+# OpenAI CLIP (ViT-L/14)
+clip @ git+https://github.com/openai/CLIP.git
+
+# OpenCLIP (ViT-L-14, LAION-2B). Pin to the exact version used to generate the
+# released feature caches for bit-identical reproduction.
+open_clip_torch>=2.20
+
+# DINOv2 ViT-B/14 is loaded via torch.hub (facebookresearch/dinov2) and needs
+# no pip install. For offline use pass --dinov2-repo or pre-populate the
+# torch.hub cache.

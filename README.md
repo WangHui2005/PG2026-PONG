@@ -34,8 +34,8 @@ pip install -r requirements.txt
 ```
 
 Feature extraction additionally requires the selected backbone implementation
-(`clip`, `open_clip`, or DINOv2) and the benchmark dataset loaders described in
-`docs/DATA.md`.
+(`clip`, `open_clip`, or DINOv2); install them with
+`pip install -r requirements-extract.txt`.
 
 ## Data and Features
 
