@@ -32,9 +32,9 @@ integer label per object.
 
 ## Feature Extraction
 
-The extraction script reuses the benchmark dataset loaders from a local
-HGM2R/TeDA-style data repository. By default, it looks for `3dosr_fv` next to
-the PONG repository. Override this path with `--dataset-code-root` or the
+The extraction script reuses the benchmark dataset loaders from the local
+`3dosr_fv` data repository. By default, it looks for `3dosr_fv` next to the
+PONG repository. Override this path with `--dataset-code-root` or the
 `PONG_DATASET_CODE_ROOT` environment variable.
 
 ```bash
