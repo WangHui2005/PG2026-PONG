@@ -31,7 +31,7 @@ from tqdm import tqdm
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATASET_CODE_ROOT = Path(
-    os.environ.get("PONG_DATASET_CODE_ROOT", PROJECT_ROOT.parent / "3dosr_fv")
+    os.environ.get("PONG_DATASET_CODE_ROOT", PROJECT_ROOT / "third_party")
 )
 
 

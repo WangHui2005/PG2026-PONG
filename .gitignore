@@ -3,8 +3,11 @@ __pycache__/
 .venv/
 .pytest_cache/
 
-# Local feature and dataset cache.
-data
+# Bundled sample features (ESB + OpenCLIP) are committed under data/openclip_L14/.
+# Everything else under data/ is a local or downloaded cache and is ignored.
+data/*
+!data/openclip_L14/
+!data/openclip_L14/esb_*.npy
 
 # Ignore transient console logs.
 *.log

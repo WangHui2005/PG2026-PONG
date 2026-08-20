@@ -1,9 +1,22 @@
 # Data and Cached Features
 
-PONG uses the four open-set 3D object retrieval benchmarks distributed through
-the HGM2R/TeDA data pipeline: OS-ESB-core, OS-NTU-core, OS-ABO-core, and
-OS-MN40-core. Place the datasets and cached features under `data/`, or create a
-symbolic link named `data` that points to an existing cache.
+PONG runs on pre-extracted multi-view features for four open-set 3D object
+retrieval benchmarks: ESB, NTU, ABO, and ModelNet40. Features live under
+`data/` and are grouped by backbone.
+
+## Bundled Sample Features
+
+The repository ships a small sample so the method can be run without
+downloading anything: ESB query/target features for the OpenCLIP ViT-L/14
+backbone, under `data/openclip_L14/`. Reproduce the ESB result directly:
+
+```bash
+python run_pong.py --dataset esb --backbone openclip
+```
+
+The remaining datasets and backbones require cached features or raw data (see
+below). Full feature files can be regenerated from the raw datasets with
+`dataset/extract_features.py`.
 
 ## Expected Feature Layout
 
@@ -32,16 +45,23 @@ integer label per object.
 
 ## Feature Extraction
 
-The extraction script reuses the benchmark dataset loaders from the local
-`3dosr_fv` data repository. By default, it looks for `3dosr_fv` next to the
-PONG repository. Override this path with `--dataset-code-root` or the
-`PONG_DATASET_CODE_ROOT` environment variable.
+The extraction script reads the raw benchmark data through the bundled dataset
+loaders in `third_party/dataset/` (adapted from TeDA, Apache-2.0). The raw
+datasets are public benchmarks; place them under `data/OS-<NAME>-core` with the
+layout expected by those loaders.
+
+Feature extraction additionally requires the chosen vision backbone and its
+dependencies:
+
+- `clip`  — the OpenAI CLIP package,
+- `openclip` — `open_clip` (ViT-L-14, LAION-2B),
+- `dinov2` — a local `torch.hub` cache of the DINOv2 model.
+
+The loaders also import `torchvision`; `open3d` is only needed for the
+point-cloud and voxel modalities, not for multi-view extraction.
 
 ```bash
-python dataset/extract_features.py \
-  --dataset-code-root /path/to/3dosr_fv \
-  --backbone openclip \
-  --dataset esb
+python dataset/extract_features.py --backbone openclip --dataset esb
 ```
 
 Supported backbones are `clip`, `openclip`, and `dinov2`; supported dataset

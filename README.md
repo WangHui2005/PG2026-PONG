@@ -10,11 +10,13 @@ pre-extracted multi-view features and does not update the vision backbone.
 ```text
 PONG_v1/
 |-- configs/                 # LODO parameter-selection protocol
+|-- data/                    # Bundled ESB sample features (OpenCLIP)
 |-- dataset/                 # Multi-view feature extraction
 |-- methods/                 # Canonical PONG implementation
 |-- experiments/             # Evaluation, analysis, and benchmarks
 |-- results/                 # Released CSV, JSON, and figure artifacts
 |-- tests/                   # Data-free protocol tests
+|-- third_party/             # Bundled benchmark dataset loaders (TeDA, Apache-2.0)
 |-- utils/                   # Retrieval metrics
 |-- docs/                    # Experiment and reproducibility details
 |-- run_pong.py              # Main retrieval entry point
@@ -37,8 +39,10 @@ Feature extraction additionally requires the selected backbone implementation
 
 ## Data and Features
 
-The evaluation scripts expect a `data/` directory or symbolic link at the
-repository root. Cached features use the following layout:
+A small ESB sample (OpenCLIP ViT-L/14) is bundled under `data/`, so
+`python run_pong.py --dataset esb --backbone openclip` works out of the box.
+The other datasets and backbones require cached features or raw data; cached
+features use the following layout:
 
 ```text
 data/
