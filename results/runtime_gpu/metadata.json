@@ -10,7 +10,8 @@
   "repeats": 5,
   "teda_iterations": 2000,
   "timed_scope": "refinement, final similarity, and full descending ranking; excludes feature extraction, loading, CPU metrics, and labels",
-  "mean_pong_ms": 3.184014232829213,
-  "mean_teda_ms": 602.2086637676693,
-  "mean_speedup": 193.82037586192132
+  "mean_pong_ms": 3.36,
+  "mean_teda_ms": 651.46,
+  "mean_speedup": 197.7,
+  "speedup_definition": "mean of the four per-workload speedup ratios (approximately 198x)"
 }

@@ -15,6 +15,16 @@ contain the exact CSV, JSON, and PDF artifacts used for analysis.
 | GPU runtime | `experiments/benchmark_runtime_gpu.py` | `results/runtime_gpu/` | Compare PONG and the reproduced TeDA optimization core on one RTX 4090 with full ranking. |
 | Qualitative retrieval | `experiments/visualize_retrieval.py` | `results/qualitative/` | Build frozen-versus-PONG top-5 retrieval examples on OS-ABO-core with OpenCLIP. |
 
+## Runtime Note
+
+`results/runtime_gpu/wallclock.csv` reports the same median-of-five latencies
+and PONG peak memory as Table 6 in the paper (PONG 2.84/2.81/3.38/4.42 ms;
+TeDA 625.86/612.33/620.30/747.36 ms). The reported speedup is the mean of the
+four per-workload speedup ratios (~198x). GPU wall-clock latency is run-to-run
+variable; re-running `experiments/benchmark_runtime_gpu.py` emits additional
+stage-level timing detail and a fresh median may differ slightly from the
+released snapshot.
+
 ## Shared Settings
 
 - Datasets: OS-ESB-core, OS-NTU-core, OS-ABO-core, and OS-MN40-core.
